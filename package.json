@@ -1,5 +1,5 @@
 {
-	"name": "javascript-template",
+	"name": "typescript-template",
 	"version": "1.0.0",
 	"description": "Node.js ESM starter with Prettier, XO, AVA, Husky, and lint-staged preconfigured.",
 	"type": "module",
@@ -7,7 +7,7 @@
 		"#src/*": "./src/*"
 	},
 	"scripts": {
-		"start": "nodemon src",
+		"start": "tsx watch src/index.ts",
 		"test": "ava",
 		"prepare": "husky"
 	},
@@ -16,7 +16,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/sebastian-suarez/JavaScript-template.git"
+		"url": "git+https://github.com/sebastian-suarez/TypeScript-template.git"
 	},
 	"keywords": [
 		"nodejs",
@@ -31,15 +31,18 @@
 	"author": "Sebastian Suarez <6.oceanic-curlers@icloud.com> (https://www.sebastiansuarez.dev)",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/sebastian-suarez/JavaScript-template/issues"
+		"url": "https://github.com/sebastian-suarez/TypeScript-template/issues"
 	},
-	"homepage": "https://github.com/sebastian-suarez/JavaScript-template#readme",
+	"homepage": "https://github.com/sebastian-suarez/TypeScript-template#readme",
 	"devDependencies": {
+		"@ava/typescript": "^6.0.0",
+		"@tsconfig/node22": "^22.0.2",
 		"ava": "^6.4.1",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.2.6",
-		"nodemon": "^3.1.10",
 		"prettier": "3.6.2",
+		"tsx": "^4.20.6",
+		"typescript": "^5.9.3",
 		"xo": "^1.2.3"
 	},
 	"lint-staged": {
@@ -51,5 +54,16 @@
 	},
 	"xo": {
 		"prettier": true
+	},
+	"ava": {
+		"extensions": {
+			"ts": "module"
+		},
+		"nodeArguments": [
+			"--import=tsx"
+		]
+	},
+	"dependencies": {
+		"@types/node": "^24.9.1"
 	}
 }
