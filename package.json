@@ -7,7 +7,7 @@
 		"#src/*": "./src/*"
 	},
 	"scripts": {
-		"start": "tsx watch --env-file=.env src/index.ts",
+		"start": "tsx watch -r dotenv/config src/index.ts",
 		"test": "ava",
 		"prepare": "husky"
 	},
@@ -40,6 +40,7 @@
 		"@ava/typescript": "^6.0.0",
 		"@tsconfig/node22": "^22.0.2",
 		"ava": "^6.4.1",
+		"dotenv": "^17.2.3",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.2.6",
 		"prettier": "3.6.2",
@@ -63,6 +64,9 @@
 		},
 		"nodeArguments": [
 			"--import=tsx"
+		],
+		"require": [
+			"dotenv/config"
 		]
 	},
 	"dependencies": {
