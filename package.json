@@ -39,6 +39,7 @@
 	"devDependencies": {
 		"@ava/typescript": "^6.0.0",
 		"@tsconfig/node22": "^22.0.2",
+		"@types/node": "^24.9.1",
 		"ava": "^6.4.1",
 		"dotenv": "^17.2.3",
 		"husky": "^9.1.7",
@@ -68,8 +69,5 @@
 		"require": [
 			"dotenv/config"
 		]
-	},
-	"dependencies": {
-		"@types/node": "^24.9.1"
 	}
 }
