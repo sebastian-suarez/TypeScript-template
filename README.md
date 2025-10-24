@@ -1,61 +1,61 @@
-# JavaScript Template
+# 🚀 TypeScript Template
 
-A minimal Node.js starter that uses ECMAScript modules, path aliases, linting, and formatting so you can begin new experiments quickly without rebuilding the same setup.
+A friendly Node.js + TypeScript starter that ships with batteries-included tooling so you can jump straight into building without chasing configuration chores.
 
-## Features
+## ✨ Features
 
-- Node.js ESM configuration with `"type": "module"` for modern import/export syntax.
-- Path aliasing via `package.json#imports` so files inside `src` can import using `#src/...`.
-- Automated code style with Prettier and XO, plus AVA ready for unit testing.
-- Husky pre-commit hook running lint-staged to auto-fix staged files before every commit.
-- Simple example module (`greet.js`) and entry point (`src/index.js`) to verify the tooling.
+- TypeScript-first setup with ESM output for modern module syntax.
+- Smart path aliasing via `package.json#imports` for tidy `#src/...` imports.
+- XO + Prettier keep the codebase clean, and AVA handles fast unit tests.
+- Husky and lint-staged run your linters automatically before every commit.
+- Example `greet` module demonstrates how the pieces fit together out of the box.
 
-## Getting Started
+## ⚡ Quick Start
 
-### Prerequisites
+```bash
+npm install
+npm start
+```
+
+> `npm start` uses `tsx` to compile and run `src/index.ts`, printing a friendly greeting.
+
+### ✅ Requirements
 
 - Node.js `>=18`
 - npm (bundled with Node.js)
 
-### Installation
+## 📜 Scripts
 
-```bash
-npm install
-```
+- `npm start` – Launches the TypeScript entry point with live reload via `tsx watch`.
+- `npm test` – Runs the AVA suite with TypeScript support ready to go.
+- `npx xo` – Lints the project (auto-fix with `--fix` if you want).
+- `npx prettier --write .` – Formats Markdown, JSON, and source files.
 
-## Available Scripts
-
-- `npm start` – Runs the example application with `nodemon src` and prints a greeting.
-- `npm test` – Runs the AVA test suite.
-- `npx xo` – Lints the project using XO.
-- `npx prettier --write .` – Formats the codebase using Prettier.
-
-## Project Structure
+## 🗂️ Project Structure
 
 ```
 src/
-  index.js          # Entry point that imports using the #src alias
+  index.ts          # Entry point using the #src alias
   modules/
-    greet.js        # Sample module demonstrating modular structure
+    greet.ts        # Sample module showcasing typed exports
 ```
 
-### Import Alias
+## 🧭 Import Alias
 
-The alias defined in `package.json` lets you write imports such as:
+The alias in `package.json` lets you write imports like:
 
-```js
+```ts
 import greet from "#src/modules/greet.js";
 ```
 
-Adjust the mapping in `package.json#imports` if you reorganize the `src` directory.
+Keep the `.js` extension in your TypeScript imports so the emitted ESM remains valid.
 
-## Development Workflow
+## 🔁 Development Flow
 
-1. Implement changes in `src/`.
-2. Run `npm start` to spin up the `nodemon` watcher while developing.
-3. Run `npx xo` to catch lint issues and use `npm test` as you expand the AVA suite.
-4. Use Prettier for consistent formatting; Husky + lint-staged will also auto-format staged files on commit.
+- Edit files in `src/` and watch `npm start` reload instantly.
+- Keep the linters happy with `npx xo` and `npx prettier --write .`.
+- Expand `npm test` as you add new AVA specs (see `tests/`).
 
-## License
+## 📄 License
 
-This project is released under the [MIT License](LICENSE).
+Released under the [MIT License](LICENSE). Have fun building! 🎉

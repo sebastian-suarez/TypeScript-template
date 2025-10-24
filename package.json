@@ -1,7 +1,7 @@
 {
 	"name": "typescript-template",
 	"version": "1.0.0",
-	"description": "Node.js ESM starter with Prettier, XO, AVA, Husky, and lint-staged preconfigured.",
+	"description": "TypeScript Node.js template with tsx watch, XO, Prettier, AVA, Husky, and lint-staged ready to go.",
 	"type": "module",
 	"imports": {
 		"#src/*": "./src/*"
@@ -19,12 +19,14 @@
 		"url": "git+https://github.com/sebastian-suarez/TypeScript-template.git"
 	},
 	"keywords": [
-		"nodejs",
+		"typescript",
+		"node",
 		"template",
-		"esm",
-		"prettier",
-		"xo",
+		"starter",
+		"tsx",
 		"ava",
+		"xo",
+		"prettier",
 		"husky",
 		"lint-staged"
 	],
