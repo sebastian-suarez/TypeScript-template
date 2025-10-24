@@ -4,20 +4,22 @@ A friendly Node.js + TypeScript starter that ships with batteries-included tooli
 
 ## ✨ Features
 
-- TypeScript-first setup with ESM output for modern module syntax.
-- Smart path aliasing via `package.json#imports` for tidy `#src/...` imports.
-- XO + Prettier keep the codebase clean, and AVA handles fast unit tests.
-- Husky and lint-staged run your linters automatically before every commit.
-- Example `greet` module demonstrates how the pieces fit together out of the box.
+- TypeScript-first setup powered by `tsx` for instant compile + run feedback.
+- Modern ESM output with path aliasing via `package.json#imports` for tidy `#src/...` imports.
+- XO + Prettier enforce consistent style, while AVA covers the unit-test workflow.
+- Husky and lint-staged keep commits clean by running your lint + format tasks automatically.
+- Example `greet` module and AVA test showcase how to wire up new features quickly.
+- `.env` support baked in via `dotenv` so local secrets load automatically during scripts and tests.
 
 ## ⚡ Quick Start
 
 ```bash
 npm install
-npm start
+npm start    # runs the watcher with dotenv preloaded
+npm test     # executes the AVA test suite
 ```
 
-> `npm start` uses `tsx` to compile and run `src/index.ts`, printing a friendly greeting.
+> `npm start` uses `tsx` to compile and run `src/index.ts`, printing a friendly greeting. Tests pick up TypeScript via `@ava/typescript` and share the same `.env` configuration.
 
 ### ✅ Requirements
 
@@ -49,6 +51,11 @@ import greet from "#src/modules/greet.js";
 ```
 
 Keep the `.js` extension in your TypeScript imports so the emitted ESM remains valid.
+
+## 🔐 Environment Variables
+
+- Copy `.env.example` to `.env` to wire up local configuration.
+- Scripts and tests preload `dotenv/config`, so `process.env.MY_VAR` is ready to use inside your code.
 
 ## 🔁 Development Flow
 

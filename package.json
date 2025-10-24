@@ -1,7 +1,7 @@
 {
 	"name": "typescript-template",
 	"version": "1.0.0",
-	"description": "TypeScript Node.js template with tsx watch, XO, Prettier, AVA, Husky, and lint-staged ready to go.",
+	"description": "TypeScript Node.js starter with tsx watch, path aliases, XO, Prettier, AVA, Husky, and lint-staged ready to go.",
 	"type": "module",
 	"imports": {
 		"#src/*": "./src/*"
@@ -24,6 +24,7 @@
 		"template",
 		"starter",
 		"tsx",
+		"path-alias",
 		"ava",
 		"xo",
 		"prettier",
