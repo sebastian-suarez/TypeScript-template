@@ -50,13 +50,6 @@
 		"typescript": "^5.9.3",
 		"xo": "^1.2.3"
 	},
-	"lint-staged": {
-		"**/*.{js,cjs,mjs}": [
-			"xo --fix",
-			"prettier --write"
-		],
-		"**/*.{json,md}": "prettier --write"
-	},
 	"xo": {
 		"prettier": true
 	},

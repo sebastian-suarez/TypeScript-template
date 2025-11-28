@@ -1,0 +1,4 @@
+{
+	"**/*.{ts,cts,mts}": ["xo --fix", "prettier --write"],
+	"**/*.{json,md}": "prettier --write"
+}
