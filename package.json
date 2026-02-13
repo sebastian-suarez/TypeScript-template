@@ -25,17 +25,20 @@
 		"node": ">=18"
 	},
 	"scripts": {
-		"start": "node ./src/index.js",
+		"start": "tsx ./src/index.js",
 		"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
 		"lint": "xo",
 		"format": "prettier --write .",
 		"prepare": "husky"
 	},
 	"devDependencies": {
+		"@tsconfig/node24": "^24.0.4",
 		"husky": "^9.1.7",
 		"jest": "^30.2.0",
 		"lint-staged": "^16.2.7",
 		"prettier": "3.8.1",
+		"tsx": "^4.21.0",
+		"typescript": "^5.9.3",
 		"xo": "^1.2.3"
 	}
 }
