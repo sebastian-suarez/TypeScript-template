@@ -1,0 +1,3 @@
+# JavaScript-template
+
+JavaScript template
