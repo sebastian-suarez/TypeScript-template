@@ -32,7 +32,7 @@
 	"scripts": {
 		"start": "tsx ./src/index.js",
 		"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
-		"lint": "xo",
+		"lint": "xo --fix",
 		"format": "prettier --write .",
 		"prepare": "husky"
 	},
