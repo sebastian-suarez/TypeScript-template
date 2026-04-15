@@ -1,13 +1,13 @@
 {
 	"name": "typescript-template",
-	"version": "1.0.0",
-	"description": "TypeScript template for Node.js with ESM, Jest, XO, and Prettier.",
+	"version": "2.0.0",
+	"description": "TypeScript template for Node.js with ESM, Vitest, XO, and Prettier.",
 	"keywords": [
 		"TypeScript",
 		"template",
 		"Node.js",
 		"ESM",
-		"Jest",
+		"Vitest",
 		"XO",
 		"Prettier"
 	],
@@ -31,21 +31,19 @@
 	},
 	"scripts": {
 		"start": "tsx ./src/index.js",
-		"test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
+		"test": "vitest",
 		"lint": "xo --fix",
 		"format": "prettier --write .",
 		"prepare": "husky"
 	},
 	"devDependencies": {
 		"@tsconfig/node24": "^24.0.4",
-		"@types/jest": "^30.0.0",
 		"husky": "^9.1.7",
-		"jest": "^30.2.0",
 		"lint-staged": "^16.2.7",
 		"prettier": "3.8.1",
-		"ts-jest": "^29.4.6",
 		"tsx": "^4.21.0",
 		"typescript": "^5.9.3",
+		"vitest": "^4.1.4",
 		"xo": "^1.2.3"
 	}
 }

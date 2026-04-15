@@ -5,7 +5,7 @@ A friendly TypeScript starter for Node.js ESM projects, with testing, linting, a
 ## ✨ What's Included
 
 - ⚡ TypeScript + Node.js ESM setup
-- 🧪 Jest configured for TypeScript via `ts-jest`
+- 🧪 Vitest for fast, native ESM testing
 - 🧹 XO linting and Prettier formatting
 - 🧭 Import aliases via `package.json#imports`
 
@@ -22,7 +22,7 @@ npm install
 ## ▶️ Scripts
 
 - `npm start` - Run the app with `tsx`
-- `npm test` - Run Jest tests
+- `npm test` - Run Vitest tests
 - `npm run lint` - Lint code with XO
 - `npm run format` - Format files with Prettier
 
@@ -30,7 +30,7 @@ npm install
 
 - `src/index.ts` - Entry point example
 - `src/modules/greet.ts` - Sample module
-- `tests/index.test.ts` - Sample Jest test
+- `tests/index.test.ts` - Sample Vitest test
 - `tsconfig.json` - TypeScript config extending `@tsconfig/node24`
 
 ## 🧭 Path Aliases

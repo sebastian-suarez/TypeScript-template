@@ -1,3 +1,4 @@
+import { expect, test } from "vitest";
 import greet from "#modules/greet.js";
 
 test("Greet", () => {
