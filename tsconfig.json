@@ -1,6 +1,3 @@
 {
-	"extends": "@tsconfig/node24/tsconfig.json",
-	"compilerOptions": {
-		"isolatedModules": true
-	}
+	"extends": "@tsconfig/node24/tsconfig.json"
 }
