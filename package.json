@@ -23,8 +23,7 @@
 	"author": "Sebastian Suarez <261091557+sebastian-suarez@users.noreply.github.com> (https://www.sebastiansuarez.dev)",
 	"type": "module",
 	"imports": {
-		"#src/*": "./src/*",
-		"#modules/*": "./src/modules/*"
+		"#src/*": "./src/*"
 	},
 	"engines": {
 		"node": ">=18"
