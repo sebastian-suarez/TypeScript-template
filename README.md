@@ -22,18 +22,20 @@ A starting point for Node.js projects written in TypeScript and run as native ES
 
 ## Develop
 
-Requires Node.js 24 or later, which runs TypeScript directly by stripping the types.
+Requires Node.js 24.15+ or 26+ (Vitest 5 doesn't support Node 25). Node runs TypeScript directly by stripping the types.
 
 ```bash
 npm install
 npm start          # run src/index.ts with Node
 npm test           # Vitest in watch mode
-npm run typecheck  # tsc, checking types only
+npm run typecheck  # TypeScript 7, checking types only
 npm run lint       # XO, fixing what it can
 npm run format     # Prettier on every file
 ```
 
 Import from `src/` through the `#src/*` alias defined in `package.json#imports`, with `.ts` specifiers: `import greet from "#src/modules/greet.ts";`. Use only TypeScript syntax that Node can strip: no enums, namespaces or parameter properties (`erasableSyntaxOnly` in `tsconfig.json` rejects them).
+
+`tsc` is TypeScript 7 (the `@typescript/native` package). XO lints through typescript-eslint, which needs the TypeScript 6 API that 7.0 doesn't ship, so `typescript` is aliased to `@typescript/typescript6`, following [Microsoft's side-by-side setup](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-60). Drop the alias once typescript-eslint supports TypeScript 7.
 
 ## How work is tracked
 
