@@ -15,24 +15,25 @@ A starting point for Node.js projects written in TypeScript and run as native ES
 | `src/`                     | Source. `index.ts` is the entry point, `modules/greet.ts` a sample module. |
 | `tests/`                   | Vitest tests.                                                              |
 | `docs/board/`              | The board's config and card files.                                         |
-| `tsconfig.json`            | TypeScript config, extending `@tsconfig/node24`.                           |
+| `tsconfig.json`            | Type-check config, extending `@tsconfig/node24`; it never emits files.     |
 | `xo.config.ts`             | XO lint rules, with Prettier integration.                                  |
 | `.prettierrc`              | Prettier formatting (tabs, double quotes).                                 |
-| `.husky/`, `.lintstagedrc` | Pre-commit hook: XO and Prettier on staged files.                          |
+| `.husky/`, `.lintstagedrc` | Pre-commit hook: XO and Prettier on staged files, then the type check.     |
 
 ## Develop
 
-Requires Node.js 18 or later.
+Requires Node.js 24 or later, which runs TypeScript directly by stripping the types.
 
 ```bash
 npm install
-npm start          # run src/index.ts with tsx
+npm start          # run src/index.ts with Node
 npm test           # Vitest in watch mode
+npm run typecheck  # tsc, checking types only
 npm run lint       # XO, fixing what it can
 npm run format     # Prettier on every file
 ```
 
-Import from `src/` through the `#src/*` alias defined in `package.json#imports`, with `.js` specifiers as Node ESM resolution expects: `import greet from "#src/modules/greet.js";`.
+Import from `src/` through the `#src/*` alias defined in `package.json#imports`, with `.ts` specifiers: `import greet from "#src/modules/greet.ts";`. Use only TypeScript syntax that Node can strip: no enums, namespaces or parameter properties (`erasableSyntaxOnly` in `tsconfig.json` rejects them).
 
 ## How work is tracked
 
