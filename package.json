@@ -1,15 +1,16 @@
 {
 	"name": "typescript-template",
 	"version": "2.0.0",
+	"private": true,
 	"description": "TypeScript template for Node.js with ESM, Vitest, XO, and Prettier.",
 	"keywords": [
-		"TypeScript",
+		"typescript",
+		"nodejs",
+		"esm",
 		"template",
-		"Node.js",
-		"ESM",
-		"Vitest",
-		"XO",
-		"Prettier"
+		"vitest",
+		"xo",
+		"prettier"
 	],
 	"homepage": "https://github.com/sebastian-suarez/TypeScript-template#readme",
 	"bugs": {

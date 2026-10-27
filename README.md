@@ -1,41 +1,43 @@
-# 🚀 TypeScript Template
+# TypeScript Template
 
-A friendly TypeScript starter for Node.js ESM projects, with testing, linting, and formatting ready to go.
+A starting point for Node.js projects written in TypeScript and run as native ESM. Create a repository from it and you get a working entry point, a test, linting, formatting and a pre-commit hook, with nothing to configure.
 
-## ✨ What's Included
+## Start here
 
-- ⚡ TypeScript + Node.js ESM setup
-- 🧪 Vitest for fast, native ESM testing
-- 🧹 XO linting and Prettier formatting
-- 🧭 Import aliases via `package.json#imports`
+- Create a new repository with **Use this template** on GitHub, then `npm install`.
+- `src/index.ts` is the entry point and `tests/index.test.ts` the sample test; replace both with your own code.
+- Work on the template itself is tracked on the [TypeScript Template board](https://github.com/users/sebastian-suarez/projects/4) (see [How work is tracked](#how-work-is-tracked)).
 
-## 📋 Requirements
+## Layout
 
-- Node.js 18+
+| Path                       | What it holds                                                              |
+| -------------------------- | -------------------------------------------------------------------------- |
+| `src/`                     | Source. `index.ts` is the entry point, `modules/greet.ts` a sample module. |
+| `tests/`                   | Vitest tests.                                                              |
+| `docs/board/`              | The board's config and card files.                                         |
+| `tsconfig.json`            | TypeScript config, extending `@tsconfig/node24`.                           |
+| `xo.config.ts`             | XO lint rules, with Prettier integration.                                  |
+| `.prettierrc`              | Prettier formatting (tabs, double quotes).                                 |
+| `.husky/`, `.lintstagedrc` | Pre-commit hook: XO and Prettier on staged files.                          |
 
-## 🛠️ Setup
+## Develop
+
+Requires Node.js 18 or later.
 
 ```bash
 npm install
+npm start          # run src/index.ts with tsx
+npm test           # Vitest in watch mode
+npm run lint       # XO, fixing what it can
+npm run format     # Prettier on every file
 ```
 
-## ▶️ Scripts
+Import from `src/` through the `#src/*` alias defined in `package.json#imports`, with `.js` specifiers as Node ESM resolution expects: `import greet from "#src/modules/greet.js";`.
 
-- `npm start` - Run the app with `tsx`
-- `npm test` - Run Vitest tests
-- `npm run lint` - Lint code with XO
-- `npm run format` - Format files with Prettier
+## How work is tracked
 
-## 📁 Project Structure
+Changes to the template are tracked on the [TypeScript Template board](https://github.com/users/sebastian-suarez/projects/4), a GitHub Project linked to this repository. `docs/board/board.json` identifies the project, and each card has a file in `docs/board/`, which is the source of truth for the board. Repositories created from this template inherit `docs/board/board.json`, so replace it with their own board's config or delete it.
 
-- `src/index.ts` - Entry point example
-- `src/modules/greet.ts` - Sample module
-- `tests/index.test.ts` - Sample Vitest test
-- `tsconfig.json` - TypeScript config extending `@tsconfig/node24`
+## License
 
-## 🧭 Path Aliases
-
-- `#src/*` -> `src/*`
-- `#modules/*` -> `src/modules/*`
-
-Use `.js` import specifiers in TypeScript source to match Node ESM resolution.
+[MIT](LICENSE)
